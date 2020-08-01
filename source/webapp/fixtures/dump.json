@@ -1,0 +1,80 @@
+[
+{
+  "model": "webapp.note",
+  "pk": 1,
+  "fields": {
+    "name": "Pupkin",
+    "email": "pupkin@puk.pu",
+    "text": "PupkinPupkinPupkinPupkinPupkinPupkinPupkinPupkin",
+    "created_at": "2020-08-01T05:30:56.958Z",
+    "updated_at": "2020-08-01T05:30:56.958Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 2,
+  "fields": {
+    "name": "Vasya",
+    "email": "vasya@vas.vs",
+    "text": "Text Vasi Text VasiText VasiText VasiText VasiText Vasi",
+    "created_at": "2020-08-01T05:31:45.738Z",
+    "updated_at": "2020-08-01T05:31:45.738Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 3,
+  "fields": {
+    "name": "Beka",
+    "email": "beks@bk.ru",
+    "text": "text Beki text Beki",
+    "created_at": "2020-08-01T05:32:08.126Z",
+    "updated_at": "2020-08-01T05:32:08.126Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 4,
+  "fields": {
+    "name": "Sanya",
+    "email": "alex@sa.sh",
+    "text": "text Sanya Sanya Sanya",
+    "created_at": "2020-08-01T05:32:37.482Z",
+    "updated_at": "2020-08-01T05:32:37.482Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 5,
+  "fields": {
+    "name": "Aman",
+    "email": "man@man.ma",
+    "text": "TExt Aman Aman Amna",
+    "created_at": "2020-08-01T05:33:10.604Z",
+    "updated_at": "2020-08-01T05:33:10.604Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$t0FCAKZOh8zs$fEhS9ee8ETIEeSF64t0N2t2EuIL2eFwOc8drdu4zjsU=",
+    "last_login": "2020-08-01T05:27:32.514Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-01T05:27:11.834Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
