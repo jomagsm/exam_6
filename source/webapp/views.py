@@ -81,9 +81,9 @@ def note_delete(request, pk):
 
 def filter_name(request):
     name = request.GET['name']
-    data = Note.objects.filter(name__icontains=name)
+    data = Note.objects.filter(name__icontains=name, status='active')
     if data:
         return render(request, 'index.html', context={
             'notes': data,
-            'status': STATUS_CHOICE,})
+            'status': STATUS_CHOICE})
     return redirect('index')
