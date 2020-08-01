@@ -60,6 +60,42 @@
   }
 },
 {
+  "model": "webapp.note",
+  "pk": 7,
+  "fields": {
+    "name": "Beka",
+    "email": "sdfjk@dslg.fg",
+    "text": "ddfggdfs\r\ndfsgfds\r\nsdfgdfs\r\ndfsg\r\ndsf\r\ngdfs\r\ng\r\ndsf\r\ngdf",
+    "created_at": "2020-08-01T07:48:02.248Z",
+    "updated_at": "2020-08-01T07:48:17.799Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 8,
+  "fields": {
+    "name": "Joma",
+    "email": "joma@provamail.com",
+    "text": "sdfsdf\r\nsdfsd\r\nsdff\r\nsdf",
+    "created_at": "2020-08-01T08:07:43.411Z",
+    "updated_at": "2020-08-01T08:07:43.411Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 11,
+  "fields": {
+    "name": "Zhoma",
+    "email": "joma_gsm@mail.ru",
+    "text": "efeeffeerwwerffecec",
+    "created_at": "2020-08-01T09:25:39.538Z",
+    "updated_at": "2020-08-01T09:25:39.538Z",
+    "status": "active"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
