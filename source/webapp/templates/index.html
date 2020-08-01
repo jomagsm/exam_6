@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}GuestNote{% endblock %}
+{% block menu %}
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'create_new' %}">Создать новый <span class="sr-only">(current)</span></a>
+        </li>
+    {#    <li class="nav-item dropdown">#}
+    {#        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"#}
+    {#           aria-haspopup="true" aria-expanded="false">#}
+    {#            Категории#}
+    {#        </a>#}
+    {#        <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+    {#            {% for item in category %}#}
+    {#                <a class="dropdown-item" href="{% url 'filter_category' item.0 %}">{{ item.1 }}</a>#}
+    {#            {% endfor %}#}
+    {#        </div>#}
+    {#    </li>#}
+{% endblock %}
+{% block content %}
+    {#    <form action="/filter_name?name" method="GET">#}
+    {#        <div class="form-group row mt-2">#}
+    {#            <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Поиск</label>#}
+    {#            <div class="col-sm-4">#}
+    {#                <input type="text" name="name" class="form-control form-control-sm" id="colFormLabelSm"#}
+    {#                       placeholder="Введите название">#}
+    {#            </div>#}
+    {#            <div class="form-group row">#}
+    {#                <div class="col-sm-2">#}
+    {#                    <button type="submit" class="btn btn-primary btn-sm">Поиск</button>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </form>#}
+    {% for note in notes %}
+    <div class="row">
+        <div class="card w-75 m-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ note.name }} {{ note.email }}<a href="#" class="float-right ml-2 btn btn-primary">Button</a>
+                <a href="#" class="float-right btn btn-primary">Button</a></h5>
+                <p class="card-text">{{ note.text }}</p>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

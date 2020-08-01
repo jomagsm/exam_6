@@ -4,7 +4,7 @@ from webapp.models import Note
 
 
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'status',]
+    list_display = ['id', 'name', 'status', 'created_at',]
     list_filter = ['name',]
 
 
