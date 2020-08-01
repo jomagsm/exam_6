@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import index_view, note_create
+from webapp.views import index_view, note_create, note_update
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view, name='index'),
     path('create_new/', note_create, name='create_new'),
+    path('note_update/<int:pk>',note_update, name='note_update'),
 ]
