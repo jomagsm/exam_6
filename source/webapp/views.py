@@ -7,8 +7,12 @@ from webapp.models import Note, STATUS_CHOICE
 
 def index_view(request):
     is_admin = request.GET.get('is_admin', None)
+    is_name = request.GET.get('name')
     if is_admin:
         order_date = Note.objects.all()
+    if is_name:
+        order_date = Note.objects.filter(name__icontains=is_name,
+                                         status='active').order_by('-created_at')
     else:
         order_date = Note.objects.filter(status='active').order_by('-created_at')
     return render(request, 'index.html', context={
@@ -77,13 +81,3 @@ def note_delete(request, pk):
     elif request.method == 'POST':
         note.delete()
         return redirect('index')
-
-
-def filter_name(request):
-    name = request.GET['name']
-    data = Note.objects.filter(name__icontains=name, status='active')
-    if data:
-        return render(request, 'index.html', context={
-            'notes': data,
-            'status': STATUS_CHOICE})
-    return redirect('index')

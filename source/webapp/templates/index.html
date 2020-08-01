@@ -7,9 +7,9 @@
     </li>
 {% endblock %}
 {% block content %}
-    <form action="/filter_name?name" method="GET">
+    <form action="{% url 'index' %}" method="GET">
         <div class="form-group row mt-2">
-            <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Поиск</label>
+            <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Найти</label>
             <div class="col-sm-4">
                 <input type="text" name="name" class="form-control form-control-sm" id="colFormLabelSm"
                        placeholder="Введите имя автора">

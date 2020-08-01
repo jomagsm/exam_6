@@ -2,7 +2,7 @@
 {% block title %}Delete Note{% endblock %}
 {% block content %}
     <div class="col-9">
-        <p class="text-center mt-5">Вы действительно хотите удалить запись "{{ note }}"?</p>
+        <p class="text-center mt-5">Вы действительно хотите удалить запись "{{ note.name }}"?</p>
         <form method="POST" action="{% url "note_delete" note.pk %}" class="text-center">
             {% csrf_token %}
             <p><input class=" btn btn-outline-dark btn-sm mb-1 mr-2" type="submit" value="Да">
