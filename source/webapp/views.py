@@ -2,7 +2,7 @@ from django.http import HttpResponseNotAllowed
 from django.shortcuts import render, redirect, get_object_or_404
 
 from webapp.forms import NoteForm
-from webapp.models import Note, STATUS_CHOICE, DEFAUL_STATUS
+from webapp.models import Note, STATUS_CHOICE
 
 
 def index_view(request):
@@ -26,7 +26,7 @@ def note_create(request):
     elif request.method == 'POST':
         form = NoteForm(data=request.POST)
         if form.is_valid():
-            note = Note.objects.create(
+            Note.objects.create(
                 name=form.cleaned_data['name'],
                 email=form.cleaned_data['email'],
                 text=form.cleaned_data['text'],

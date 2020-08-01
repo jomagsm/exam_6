@@ -11,5 +11,3 @@ class Note(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True, verbose_name='Время изменения')
     status = models.CharField(max_length=20, verbose_name='Статус', choices=STATUS_CHOICE, default=DEFAUL_STATUS)
-
-
