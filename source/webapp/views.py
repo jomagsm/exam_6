@@ -13,7 +13,8 @@ def index_view(request):
         order_date = Note.objects.filter(status='active').order_by('-created_at')
     return render(request, 'index.html', context={
         'notes': order_date,
-        'status': STATUS_CHOICE
+        'status': STATUS_CHOICE,
+        'form': NoteForm()
     })
 
 
@@ -76,3 +77,13 @@ def note_delete(request, pk):
     elif request.method == 'POST':
         note.delete()
         return redirect('index')
+
+
+def filter_name(request):
+    name = request.GET['name']
+    data = Note.objects.filter(name__icontains=name)
+    if data:
+        return render(request, 'index.html', context={
+            'notes': data,
+            'status': STATUS_CHOICE,})
+    return redirect('index')
