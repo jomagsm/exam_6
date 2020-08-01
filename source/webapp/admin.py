@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from webapp.models import Note
+
+
+class NoteAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'status',]
+    list_filter = ['name',]
+
+
+admin.site.register(Note, NoteAdmin)

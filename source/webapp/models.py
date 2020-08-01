@@ -5,7 +5,7 @@ STATUS_CHOICE = [(DEFAUL_STATUS, 'Активно'), ('blocked', 'Заблоки�
 
 
 class Note(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Название')
+    name = models.CharField(max_length=100, verbose_name='Имя')
     email = models.EmailField(max_length=100, verbose_name='Электронная почта')
     text = models.TextField(max_length=2000, null=False, blank=False, verbose_name='Текст записи')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
