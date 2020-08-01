@@ -36,10 +36,9 @@
     <div class="row">
         <div class="card w-75 m-2">
             <div class="card-body">
-                <h5 class="card-title">{{ note.name }} {{ note.email }}<a href="#" class="float-right ml-2 btn btn-primary">Button</a>
+                <h5 class="card-title">{{ note.name }} {{ note.email }}<a href="{% url 'note_delete' note.pk %}" class="float-right ml-2 btn btn-primary">delete</a>
                 <a href="{% url 'note_update' note.pk %}" class="float-right btn btn-primary">edit</a></h5>
                 <p class="card-text">{{ note.text }}</p>
-
             </div>
         </div>
     </div>

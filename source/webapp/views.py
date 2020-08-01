@@ -67,3 +67,12 @@ def note_update(request, pk):
             })
     else:
         return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])
+
+
+def note_delete(request, pk):
+    note = get_object_or_404(Note, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'note_delete.html', context={'note': note})
+    elif request.method == 'POST':
+        note.delete()
+        return redirect('index')

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Delete Note{% endblock %}
+{% block content %}
+    <div class="col-9">
+        <p class="text-center mt-5">Вы действительно хотите удалить запись "{{ note }}"?</p>
+        <form method="POST" action="{% url "note_delete" note.pk %}" class="text-center">
+            {% csrf_token %}
+            <p><input class=" btn btn-outline-dark btn-sm mb-1 mr-2" type="submit" value="Да">
+                <a class=" btn btn-outline-dark btn-sm mb-1 mr-2" href=" {% url 'index' %}" role="button">Нет
+                </a></p>
+            {#            <p><a href="{% url "find" article.pk %}">Cancel</a></p>#}
+        </form>
+    </div>
+{% endblock %}
